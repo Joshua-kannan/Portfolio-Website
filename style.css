@@ -1,0 +1,842 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* CSS Reset */
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Global Variables */
+:root{
+    --bgColor: #393e46;
+    --bodyColor: #222831;
+    --textColor: #EEEEEE;
+    --themeColor: #14D8e2;
+    --shadowColor: #14d8e2a6;
+    --shadow: 0 0 50px rgba(0, 0, 0, 50%);
+} 
+
+body{
+    background-color: var(--bodyColor);
+    color: var(--textColor);
+}
+
+/* Design Default Scroll Bar */
+body::-webkit-scrollbar {
+    width: 0.6em;
+}
+body::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 60px var(--bgColor);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--themeColor);
+    border-radius: 10px;
+}
+
+
+/* Global Classes */
+.globBtn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--themeColor);
+    padding: 12px 15px 9px 15px;
+    color: var(--bodyColor);
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 3px;
+    box-shadow: 0 0 20px var(--shadowColor);
+    transition: 0.4s;
+}
+.globBtn:hover{
+    background-color: var(--bodyColor);
+    color: var(--themeColor);
+}
+
+.padding{
+    padding: 120px 6%;
+    box-sizing: border-box;
+}
+
+.center{
+    text-align: center;
+}
+
+.border{
+    position: relative;
+}
+.border::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 20%;
+    height: 2px;
+    background-color: var(--bgColor);
+    border-radius: 2px;
+}
+
+/* End Global Classes */
+
+/* ======================================================================= */
+
+/* Header START */
+header{
+    background-color: var(--bgColor);
+    border-right: 1px solid gray;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px 0;
+    transition: 0.5s;
+    z-index: 999;
+}
+header nav ul li{
+    list-style: none;
+    margin: 20px 0;
+    writing-mode: vertical-lr;
+    position: relative;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+header nav ul li a:hover{
+    color: var(--themeColor);
+}
+header nav ul li .active{
+    color: var(--themeColor);
+}
+header nav ul li .active::after{
+    content: '';
+    position: absolute;
+    right: -14px;
+    top: 45%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--themeColor);
+    transition: 0.4s;
+}
+header .social-icons a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+header .social-icons a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--themeColor);
+    background-color: var(--bodyColor);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 2px;
+    font-size: 20px;
+    transition: 0.4s;
+}
+header .social-icons a:hover{
+    background-color: var(--themeColor);
+    color: var(--bgColor);
+}
+
+/* Menu Toggle Button */
+#MenuBtn{
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 43px;
+    color: var(--bodyColor);
+    background-color: var(--themeColor);
+    z-index: 99;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--bgColor);
+    box-shadow: 0 0 20px #14d8e269;
+    display: none;
+}
+
+/* Responsive View */
+@media only screen and (max-width: 930px){
+    #MenuBtn{
+        display: block;
+    }
+    header{
+        left: -70px;
+    }
+}
+
+.menuActive header{
+    left: 0;
+}
+
+/* Header END */
+
+/* =================================================================== */
+
+/* ===== Main Section START===== */
+main{
+    margin-left: 70px;
+    position: relative;
+}
+@media only screen and (max-width: 930px){
+    main{
+        margin-left: 0;
+    }
+}
+/* ===== Main Section END===== */
+
+/* --------------------------------------------------------------------------- */
+
+/* ========== Home Section START ========== */
+#home{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bodyColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+#home .left-col{
+    flex-basis: 60%;
+    
+}
+#home .left-col br {
+    content: '\00a0'; /* Add a non-breaking space character */
+    margin-bottom: 20px; /* Adjust this margin to control the space */
+    display: block; /* Ensures the margin is applied correctly */
+}
+#home .left-col h4{
+    color: var(--themeColor);
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+#home .left-col h1{
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 55px;
+    margin-top: 40px;
+}
+#home .left-col h1 span{
+    color: var(--themeColor);
+}
+#home .left-col h1 + p{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+#home .left-col h1 + p span{
+    color: var(--themeColor);
+}
+#home .left-col h1 + p + p{
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+#home .right-col{
+    flex-basis: 35%;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+#home .right-col img{
+    width: 100%;
+    z-index: 5;
+    animation: ImgMove 10s infinite;
+}
+#home .right-col::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: var(--bodyColor);
+    border: 5px solid var(--themeColor);
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    box-shadow: 0 0 50px var(--themeColor);
+    z-index: -1;
+}
+#home .right-col::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5%;
+    background-color: var(--bodyColor);
+    border: 5px solid var(--bodyColor);
+    box-shadow: 0 -20px 30px rgba(0, 0, 0, 50%);
+    top: auto; /* Set top to auto */
+    bottom: 0; /* Set bottom to 0 */
+}
+
+/* ===== Home Section Image Move Up & Down ===== */
+@keyframes ImgMove {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+/* ===== Responsive View ===== */
+
+@media only screen and (max-width: 900px){
+    #home{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        height: auto;
+    }
+    #home .left-col{
+        flex-basis: 100%;
+    }
+    #home .right-col{
+        width: 50%;
+    }
+    #home .left-col h1 + p span{
+    
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width:650px){
+    #home .left-col h1{
+        font-size: 50px;
+        line-height: 55px;
+       }
+    }
+    #home .left-col h1 + p span{
+    
+        font-size: 40px;
+    }
+    #home .left-col h1 + p{
+        font-size: 30px;
+        font-weight: 400;
+        height: 50px;
+    }  
+    #home .right-col{
+        width: 90%;
+    }
+
+@media only screen and (max-width:380px){
+    #home .left-col h1{
+        font-size: 50px;
+        line-height: 50px;
+       }
+    }
+   
+    #home .left-col h1 + p{
+        font-size: 30px;
+        font-weight: 400;
+        height: 100px;
+        
+    }  
+/* ========== Home Section END ========== */  
+
+/* =================================================================================================== */
+
+/* ========== About Section START ========== */  
+#about{
+    width: 100%;
+    background-color: var(--bodyColor);
+    position: relative;
+    
+}
+#about .sub-para {
+    display: block; 
+}
+#about::before{
+    content: '';
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    width: 120px;
+    height: 120px;
+    border: 10px solid var(--themeColor);
+    border-radius: 50%;
+    background-color: var(--shadowColor);
+    box-shadow: 0 0 20px var(--shadowColor);
+    animation: CircleMove 16s infinite;
+}
+@keyframes CircleMove {
+    0%{
+        right: 2%;
+    }
+    50%{
+        right: 27%;
+    }
+    100%{
+        right: 2%;
+    }
+}
+#about .col{
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    background-color:  var(--bodyColor);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    border-radius: 4px;
+}
+
+/* We will Use These Classes Globally START */
+.heading{
+    color: var(--themeColor);
+    font-weight: 700px;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.divider li{
+    width: 20%;
+    height: 2px;
+    background-color: var(--themeColor);
+    margin-bottom: 10px;
+    list-style: none;
+}
+.sub-para{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 30px;
+}
+/*  END */
+
+#about .col .btns{
+    margin-top: 40px;
+}
+#about .col .btns a{
+    margin-top: 0 10px;
+    width: 150px;
+}
+
+#about .col .img{
+    position: absolute;
+    top: -15%;
+    left: -20%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid var(--bodyColor);
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--bgColor);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+#about .col .img img{
+    width: 100%;
+}
+/* Responsive View */
+
+@media only screen and (max-width:730px){
+    #about .col .img{
+        left: 45%;
+    }
+    #about .col{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:485px){
+    #about .col .btns a{
+        margin: 10 0px;
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width:450px){
+    #about .col .img{
+        left: 60%;
+        top: -5;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ========== About Section END ========== */  
+
+/* ======================================================================================= */
+
+/* ========== Resume Section START ========== */
+#resume .res-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 70px;
+}
+#resume .res-row .row-box{
+    position: relative;
+    border-left: 2px solid var(--themeColor);
+    padding: 1px 20px 05px 20px;
+}
+#resume .res-row .row-box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--themeColor);
+    border-radius: 50%;
+    background-color: var(--bodyColor);
+}
+#resume .res-row .row-box h2{
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--themeColor);
+}
+#resume .res-row .row-box .info h3{
+    font-weight: 500;
+    font-family: 22 px;
+    text-transform: capitalize;
+}
+#resume .res-row .row-box .info h3+p{
+    font-weight: 300;
+    font-size: 18px;
+    margin: 15px 0;
+    font-style: italic;
+    line-height: 20px;
+}
+#resume .res-row .row-box .info h3+p+p{
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+}
+#resume .res-row .row-box .info ul li{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 16px;
+}
+#resume .center{
+    margin-top: 70px;
+}
+#resume .center a{
+    width: 150px;
+}
+
+/* responsive view */
+@media only screen and (max-width: 930px){
+    #resume .res-row{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 600px){
+    #resume .res-row{
+        grid-template-columns: 1fr;
+    }
+}
+/* ========== Resume Section END ========== */
+
+/* ============================================================================================ */
+
+/* ========== Skills Section START ========== */
+#skill::before{
+    position: relative;
+}
+#skill::before{
+    content: '';
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    width: 120px;
+    height: 120px;
+    border: 10px solid var(--themeColor);
+    border-radius: 50%;
+    background-color: var(--shadowColor);
+    box-shadow: 0 0 20px var(--shadowColor);
+    animation: CircleMove2 16s infinite;
+}
+@keyframes CircleMove2 {
+    0%{
+        left: 2%;
+    }
+    50%{
+        left: 27%;
+    }
+    100%{
+        left: 2%;
+    }
+}
+#skill .slill-col{
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 650px;
+    background-color: var(--bodyColor);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#skill .slill-col .skill-item{
+    width: 100%;
+}
+#skill .slill-col .skill-item .skill-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#skill .slill-col .skill-item .skill-info h4{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 15px;
+}
+#skill .slill-col .skill-item .outer-line{
+    width: 100%;
+    height: 6px;
+    background-color: var(--bgColor);
+    margin: 7px 0;
+}
+#skill .slill-col .skill-item .inner-line{
+    height: 6px;
+    width: 0%;
+    background-color: var(--themeColor);
+    position: relative;
+    transition: width 2s ease-in-out;
+}
+#skill .slill-col .skill-item .inner-line::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -6.5px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--themeColor);
+    border-radius: 50%;
+    background-color: var(--bgColor);
+}
+
+/* Responsive View */
+@media only screen and (max-width: 730px){
+#skill .slill-col{
+    width: 100%;
+}
+}
+/* ========== Skills Section END ==========*/
+
+/* ==================================================================================================== */
+
+/* ========== Services Section START ========== */
+#service .ser-row{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+#service .ser-row .ser-item{
+    position: relative;
+    padding: 30px 20px;
+    text-align: center;
+    background-color: var(--bodyColor);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+#service .ser-row .ser-item .ser-info{
+    transition: 0.5s;
+}
+#service .ser-row .ser-item .ser-info i{
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--shadowColor);
+    border-radius: 50%;
+    line-height: 46px;
+    font-size: 22px;
+    border: 3px solid var(--themeColor);
+    transition: 0.4s;
+}
+#service .ser-row .ser-item .ser-info h2{
+    font-size: 22px;
+    margin: 10px;
+    font-weight: 600;
+}
+#service .ser-row .ser-item .ser-info p{
+    margin: 20px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+#service .ser-row .ser-item:hover .ser-info i{
+    background-color: var(--themeColor);
+    border: 3px solid var(--shadowColor);
+    color: var(--bodyColor);
+    box-shadow: 0 0 20px var(--shadowColor);
+}
+#service .ser-row .ser-item .hirebtn{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    width: 100%;
+}
+#service .ser-row .ser-item:hover .ser-info{
+    transform: translateY(-30%);
+}
+#service .ser-row .ser-item:hover .hirebtn{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive View */
+@media only screen and (max-width:885px){
+    #service .ser-row{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+}
+@media only screen and (max-width:600px){
+    #service .ser-row{
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+}
+@media only screen and (max-width:600px){
+    .sub-para{
+        display: none;
+    }
+}
+/* ========== Services Section END ========== */
+
+/* =================================================================================================== */
+
+/* ========== Contact Section START ========== */
+#contact{
+    background-color: var(--bgColor);
+
+}
+#contact .cont-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+#contact .cont-row .cont-info{
+    flex-basis: 50%;
+    /* background-color: rgba(255, 0, 0, 0.534); */
+}
+#contact .cont-row .cont-info .icon-list{
+    margin: 30px 0;
+}
+#contact .cont-row .cont-info .icon-list p{
+    margin: 20px 0;
+    font-weight: 300;
+    font-size: 20px;
+    font-style: italic;
+}
+#contact .cont-row .cont-info .icon-list p i{
+    color: var(--themeColor);
+    margin-right: 10px;
+    font-size: 40px;
+}
+#contact .cont-row .cont-info .social-icons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#contact .cont-row .cont-form{
+    flex-basis: 40%;
+    background-color: var(--shadowColor);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+#contact .cont-row .cont-form form input, textarea{
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 19px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: none;
+    color: var(--textColor);
+    border-bottom: 1px solid var(--bodyColor);
+    resize: none;
+}
+#contact .cont-row .cont-form form input::placeholder, textarea::placeholder{
+    color: lightgray;
+}
+#contact .cont-row .cont-form form input[type="submit"]{
+border: none;
+background-color: var(--bodyColor);
+border-radius: 50px;
+margin-top: 30px;
+cursor: pointer;
+}
+
+/* Responsive View */
+@media only screen and (max-width: 1150px){
+    #contact .cont-row{
+        gap: 0;
+    }
+}
+@media only screen and (max-width: 950px){
+    #contact .cont-row{
+        flex-direction: column;
+        gap: 40;
+    }
+    #contact .cont-row .cont-form{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 650px){
+    #contact .cont-row .cont-form{
+        width: 100%;
+        
+}
+}
+/* ========== Contact Section END ========== */
+
+footer {
+    background-color: var(--bodyColor); /* Background color for the footer */
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align the copyright notice */
+    padding: 10px 0; /* Add some padding for spacing */
+}
+
+.copyright {
+    font-size: 14px; /* Adjust the font size */
+}
+
