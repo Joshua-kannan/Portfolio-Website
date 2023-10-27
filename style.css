@@ -747,7 +747,7 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     position: relative;
-    border-top: 5px solid var(--themeColor);
+    
 }
 .port-row .img-box{
     background-color: var(--bodyColor);
@@ -763,7 +763,7 @@ main{
     left: 48%;
     height: 50px;
     width: 5px;
-    background-color: var(--themeColor);
+    
     border-radius: 15px;
     z-index: -1;
 }
