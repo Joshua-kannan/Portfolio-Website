@@ -739,6 +739,116 @@ main{
 
 /* =================================================================================================== */
 
+/* ============ Project section START================= */
+.port-row{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    position: relative;
+    border-top: 5px solid var(--themeColor);
+}
+.port-row .img-box{
+    background-color: var(--bodyColor);
+    box-shadow: var(--shadow);
+    border-radius: 7px;
+    position: relative;
+    margin-top: 38px;
+}
+.port-row .img-box::before{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 48%;
+    height: 50px;
+    width: 5px;
+    background-color: var(--themeColor);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.port-row .img-box .img {
+    /* Set the image size here as well if needed */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.port-row .img-box .img img {
+    /* Additional styling for the image if necessary */
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+}
+.port-row .img-box .img-info{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    height: 70%;
+    width: 70%;
+    background-color: #14d8e2ce;
+    text-align: center;
+    border-radius: 2px;
+    color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    opacity: 0;
+}
+.port-row .img-box .img-info h3{
+    font-weight: 700;
+    font-size: 25px;
+}
+.port-row .img-box .img.info div a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20p;
+    color: var(--bodyColor);
+}
+.port-row .img-box:hover .img-info{
+    opacity: 1;
+}
+
+
+/* Responsive View */
+@media only screen and (max-width: 1200px){
+    .port-row{
+        grid-gap: 20px;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .port-row{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        border: none;
+    }
+    .port-row .img-box::before{
+        height: 0;
+    }
+}
+@media only screen and (max-width:790px){
+    .port-row{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+@media only screen and (max-width:500px){
+    .port-row{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+/* ============ Project section END================= */
+
+
+
 /* ========== Contact Section START ========== */
 #contact{
     background-color: var(--bgColor);
