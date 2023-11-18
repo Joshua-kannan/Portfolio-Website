@@ -715,7 +715,7 @@ main{
     width: 100%;
 }
 #service .ser-row .ser-item:hover .ser-info{
-    transform: translateY(-30%);
+    transform: translateY(-10%);
 }
 #service .ser-row .ser-item:hover .hirebtn{
     visibility: visible;
@@ -739,7 +739,10 @@ main{
     .sub-para{
         display: none;
     }
+
 }
+
+
 /* ========== Services Section END ========== */
 
 /* =================================================================================================== */
