@@ -752,7 +752,7 @@ main{
     margin-top: 50px;
     margin-bottom: 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
     position: relative;
     
