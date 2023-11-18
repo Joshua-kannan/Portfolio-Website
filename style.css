@@ -103,7 +103,7 @@ header{
 }
 header nav ul li{
     list-style: none;
-    margin: 20px 0;
+    margin: 35px 0;
     writing-mode: vertical-lr;
     position: relative;
 }
@@ -186,7 +186,12 @@ header .social-icons a:hover{
     header{
         left: -70px;
     }
+    header nav ul li{
+        margin: 20px 0;
+    }
+    
 }
+
 
 .menuActive header{
     left: 0;
