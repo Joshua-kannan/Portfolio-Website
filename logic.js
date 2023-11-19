@@ -70,3 +70,16 @@ window.addEventListener('scroll', ()=>{
 });
 // ===== Active Link STATE on Scroll END ====== //
 
+function showBlueBox(link) {
+    if (window.innerWidth <= 500) {
+        const blueBox = document.createElement('div');
+        blueBox.className = 'blue-box';
+        blueBox.innerHTML = '<p>Under Construction</p>';
+        document.body.appendChild(blueBox);
+
+        // Add click event listener to the blue box
+        blueBox.addEventListener('click', function () {
+            window.location.href = link; // Open the link when the blue box is clicked
+        });
+    }
+}
