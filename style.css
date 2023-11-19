@@ -752,7 +752,7 @@ main{
     margin-top: 50px;
     margin-bottom: 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     position: relative;
     
@@ -842,15 +842,19 @@ main{
 }
 @media only screen and (max-width:790px){
     .port-row{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
     }
 }
 @media only screen and (max-width:500px){
     .port-row{
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr 1fr;
         grid-gap: 20px;
     }
+    .port-row .img-box .img-info{
+        display: none;
+    }
+
 }
 
 /* ============ Project section END================= */
