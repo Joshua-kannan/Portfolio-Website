@@ -189,7 +189,9 @@ header .social-icons a:hover{
     header nav ul li{
         margin: 20px 0;
     }
-    
+    header nav ul li a{
+        font-size: 16px;
+    }
 }
 
 
