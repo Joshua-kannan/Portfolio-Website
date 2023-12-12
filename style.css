@@ -879,9 +879,14 @@ main{
 #contact .cont-row .cont-info .icon-list{
     margin: 30px 0;
 }
+
+#contact .cont-row .cont-info .icon-list a{
+    color: #EEEEEE;
+    text-decoration: none;
+}
 #contact .cont-row .cont-info .icon-list p{
     margin: 20px 0;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     font-style: italic;
 }
